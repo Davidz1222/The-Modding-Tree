@@ -28,6 +28,12 @@ addLayer("p", {
 	upgrades: {11: {title: "Kill GDW",
     description: "The world is now better, you get double sussy points",
     cost: new Decimal(5),
+	upgrades: {12: {title: "Bury GDW",
+    description: "Seeing his body makes you happy, yo",
+    cost: new Decimal(15),     effect() {
+        return player[this.layer].points.add(1).pow(0.5)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect	
 
         },
 
