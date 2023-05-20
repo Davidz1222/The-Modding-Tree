@@ -24,5 +24,12 @@ addLayer("p", {
     hotkeys: [
         {key: "r", description: "r: Reset for retardism", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},    
+	upgrades: {11: {title: "Kill GDW",
+    description: "The world is now better, you get double sussy points",
+    cost: new Decimal(5),
+
+        },
+
+    },
 })
